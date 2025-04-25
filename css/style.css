@@ -115,13 +115,13 @@ header .navbar h2 {
 
 /* End Navbar */
 
-/* Start Hero */
-.hero-section {
+/* Start home */
+.home-section {
     background-color: var(--primary-color);
     min-height: 100vh;
 }
 
-.hero-section .section-content {
+.home-section .section-content {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -129,31 +129,31 @@ header .navbar h2 {
     justify-content: space-between;
 }
 
-.hero-section .hero-details .title {
+.home-section .home-details .title {
     font-size: var(--font-size-xxl);
     color: var(--secondary-color);
     font-family: "Miniver", sans-serif;
 }
 
-.hero-section .hero-details .subtitle {
+.home-section .home-details .subtitle {
     font-size: var(--font-size-xl);
     max-width: 70%;
     font-weight: var(--font-weight-semibold);
     margin-top: 8px;
 }
 
-.hero-section .hero-details .description {
+.home-section .home-details .description {
     font-size: var(--font-size-m);
     max-width: 70%;
     margin: 24px 0 40px;
 }
 
-.hero-section .hero-details .buttons {
+.home-section .home-details .buttons {
     display: flex;
     gap: 20px;
 }
 
-.hero-section .hero-details .button {
+.home-section .home-details .button {
     padding: 10px 26px;
     color: var(--primary-color);
     border-radius: var(--border-radius-m);
@@ -163,20 +163,20 @@ header .navbar h2 {
     transition: var(--transition);
 }
 
-.hero-section .hero-details .button:hover,
-.hero-section .hero-details .contact-us {
+.home-section .home-details .button:hover,
+.home-section .home-details .contact-us {
     color: var(--white-color);
     border-color: var(--white-color);
     background-color: transparent;
 }
 
-.hero-section .hero-details .contact-us:hover {
+.home-section .home-details .contact-us:hover {
     color: var(--primary-color);
     border-color: var(--secondary-color);
     background-color: var(--secondary-color);
 }
 
-.hero-section .hero-image-wrapper {
+.home-section .home-image-wrapper {
     max-width: 50%;
     margin-right: 30px;
     transform: scaleX(-1)
@@ -244,22 +244,22 @@ header .navbar h2 {
 
 }
 @media screen and (max-width:725px) {
-    .hero-section .section-content{
+    .home-section .section-content{
         flex-direction: column-reverse;
         justify-content: center;
         gap: 50px;
         text-align: center;
         padding: 30px 20px 20px;
     }
-    .hero-section .hero-details :is(.subtitle,.description){
+    .home-section .home-details :is(.subtitle,.description){
         max-width: 100%;
     }
-    .hero-section .hero-details .buttons{
+    .home-section .home-details .buttons{
         justify-content: center;
     }
-    .hero-section .hero-image-wrapper{
+    .home-section .home-image-wrapper{
         max-width: 70%;
         margin-right:0;
     }
 }
-/* End Hero */
+/* End home */
