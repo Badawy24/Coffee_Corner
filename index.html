@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/home-coffee.png">
 </head>
+
 <body>
     <!-- Strat NavBar -->
     <header>
         <div class="overlay"></div>
         <nav class="navbar section-content">
-            <a href="#" class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <h2 class="logo-text"> Coffee Corner</h2>
             </a>
             <ul class="nav-menu">
                 <button id="menu-close-button" class="fas fa-times"></button>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="" class="nav-link">Menu</a>
@@ -41,17 +43,18 @@
         </nav>
     </header>
     <!-- End NavBar -->
-    
-    
+
+
     <main>
         <!-- Start home -->
-        <section class="home-section">
+        <section id="home" class="home-section">
             <div class="section-content">
                 <div class="home-details">
                     <h2 class="title">Best Coffee</h2>
                     <h3 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                     <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed atque cumque veniam, harum quas repellat error deserunt. Nostrum, error.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia sed atque cumque veniam, harum
+                        quas repellat error deserunt. Nostrum, error.
                     </p>
                     <div class="buttons">
                         <a href="#" class="button order-now">
@@ -68,7 +71,33 @@
             </div>
         </section>
         <!-- End home -->
+
+        <!-- Strat About Section -->
+        <section id="about" class="about-section">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="img/gallary/07.jpg" alt="about-coffee" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">
+                        About Coffee
+                    </h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quis ea et illo, necessitatibus
+                        sunt non repudiandae odit. Placeat atque consequuntur libero impedit. Voluptatum itaque ipsa,
+                        quaerat reprehenderit cupiditate aut!
+                    </p>
+                    <div class="social-link-list">
+                        <a href="#about" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#about" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#about" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
     </main>
     <script src="js/navbar.js"></script>
 </body>
+
 </html>

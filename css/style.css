@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Start Page Reset */
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 ul {
@@ -22,6 +24,7 @@ button {
 }
 
 img {
+    cursor: pointer;
     width: 100%;
 }
 
@@ -66,6 +69,26 @@ img {
     max-width: var(--site-max-width);
 }
 
+.section-title {
+    text-align: center;
+    padding: 60px 0;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 0 auto;
+    border-radius: var(--border-radius-m);
+    background-color: var(--secondary-color);
+
+}
+
+/* End Page Reset */
+/*************************************************/
 /* Start Navbar */
 header {
     background-color: var(--primary-color);
@@ -114,7 +137,7 @@ header .navbar h2 {
 }
 
 /* End Navbar */
-
+/*************************************************/
 /* Start home */
 .home-section {
     background-color: var(--primary-color);
@@ -182,6 +205,68 @@ header .navbar h2 {
     transform: scaleX(-1)
 }
 
+/* End home */
+/*************************************************/
+/* Start About */
+.about-section {
+    padding: 140px 0;
+    background-color: var(--light-pink-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+    transition: var(--transition);
+
+}
+
+.about-section .about-image-wrapper .about-image:hover {
+    transform: scale(0.8);
+}
+.about-section .about-details{
+    max-width: 50%;
+}
+.about-section .about-details .section-title {
+    padding: 0;
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+
+.about-section .about-details .social-link-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-section .about-details .social-link-list .social-link {
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: var(--transition);
+
+}
+
+.about-section .about-details .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+    transform: scale(1.3);
+}
+
+/* End About */
+
+/*************************************************/
+/* Responsive Query Css Code Max Width 900px */
 @media screen and (max-width:900px) {
     :root {
         --font-size-m: 1.rem;
@@ -189,7 +274,8 @@ header .navbar h2 {
         --font-size-xl: 1.5rem;
         --font-size-xxl: 1.8rem;
     }
-    .show-mobile-menu .overlay{
+
+    .show-mobile-menu .overlay {
         content: "";
         position: fixed;
         left: 0;
@@ -198,8 +284,9 @@ header .navbar h2 {
         width: 100%;
         backdrop-filter: blur(5px);
         background-color: rgba(0, 0, 0, 0.2);
-        
+
     }
+
     .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: var(--font-size-l);
@@ -242,24 +329,44 @@ header .navbar h2 {
         font-weight: var(--font-weight-semibold);
     }
 
+    .about-section .section-content{
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+    .about-section .about-image-wrapper .about-image{
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        aspect-ratio: 1;
+    }
+    .about-section .about-details{
+        max-width: 100%;
+    }
+
 }
+
+/* Responsive Query Css Code Max Width 725px */
 @media screen and (max-width:725px) {
-    .home-section .section-content{
+    .home-section .section-content {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 50px;
         text-align: center;
         padding: 30px 20px 20px;
     }
-    .home-section .home-details :is(.subtitle,.description){
+
+    .home-section .home-details :is(.subtitle, .description) {
         max-width: 100%;
     }
-    .home-section .home-details .buttons{
+
+    .home-section .home-details .buttons {
         justify-content: center;
     }
-    .home-section .home-image-wrapper{
+
+    .home-section .home-image-wrapper {
         max-width: 70%;
-        margin-right:0;
+        margin-right: 0;
     }
 }
+
 /* End home */
